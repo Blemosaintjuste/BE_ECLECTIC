@@ -55,7 +55,7 @@
            
         </aside>
         <main>
-            
+            <a href="./cadastroArtistasFavoritos.jsp" class="buttons-cadastro">Cadastrar Artista Favorito</a>
         </main>
         
 
