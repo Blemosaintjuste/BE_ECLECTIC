@@ -1,0 +1,22 @@
+#retangulo {
+    position: fixed;
+    height: 37%;
+    width: 20%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(48, 47, 47);
+    text-align: center;   
+    padding: 10px;
+}
+
+a {
+    color: white;
+    font-size: 25px;
+    text-align: center;
+}
+
+#logo {
+    text-align: center;
+}
+

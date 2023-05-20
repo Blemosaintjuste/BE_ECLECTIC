@@ -1,0 +1,187 @@
+header {
+    width: 100%;
+    background-color: black;
+    height: 80px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0px;
+    
+    
+}
+
+.buttons-header {
+    display: flex;
+    float: right;
+    color: white;
+    margin: 15px 15px;
+    align-items: center;
+    height: 50px;
+}
+
+
+nav {
+    width: 100%;
+    background-color: #0095A8;
+    height: 60px;
+}
+
+.buttons-nav {
+    display: inline-flex;
+    color: white;
+    height: 50px;
+    margin: 0px 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    height: 650px;
+    margin: 20px 10px 10px ;
+}
+
+footer {
+    width: 100%;
+    height: 150px;
+    clear: both;
+    background: black;
+    color: white;
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.buttons-footer {
+    display: flex;
+    color: white;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+.button-help {
+    display: inline-flex;
+    color: white;
+    height: 50px;
+    float: right;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10px;
+    
+}
+
+p {
+    color: black;
+    font-size: 40px;
+    text-align: center;
+
+}
+
+.imgs {
+    margin-top: 15px;
+}
+
+h1 {
+    font-size: 60px;
+    text-align: center;
+}
+
+input {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.icons {
+    float: right;
+    margin: 15px;
+}
+
+.icons-distance {
+    margin-right: 20px;
+}
+
+.all-artists {
+    font-size: 25px;
+    margin-top: 500px;
+    margin-left: 15px;
+}
+
+
+/*  Para o máximo de largura de 480px  */
+@media screen and (max-width: 480px) {
+    header {
+        width: 100%;
+    }
+    div.logo {
+        display: flex;
+       
+        height: 85px;
+    }
+    div.icons {
+        display: none;
+    }
+    input {
+        display: none;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    aside {
+        display: none;
+    }
+    nav {
+        display: none;
+    }
+    header.a {
+        display: none;
+
+    }
+    main{
+        height: 500px;
+        margin: 20px 10px 10px ;
+    }
+    p{
+        font-size: 20px;
+       text-align: justify;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        width: 100%;
+    }
+    div.logo {
+        display: flex;
+       
+        height: 85px;
+    }
+    div.icons {
+        display: none;
+    }
+    input {
+        display: none;
+    }
+    h1 {
+        font-size: 24px;
+    }
+    aside {
+        display: none;
+    }
+    nav {
+        display: none;
+    }
+    header.a {
+        display: none;
+
+    }
+    main{
+        height: 500px;
+        margin: 20px 10px 10px ;
+    }
+    p{
+        font-size: 20px;
+       text-align: justify;
+    }
+}
+

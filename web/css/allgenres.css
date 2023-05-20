@@ -1,0 +1,231 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    margin-left: 30px;
+    font-size: 50px;
+    margin-bottom: 2px;
+    margin-top: 10px
+}
+
+
+header {
+    width: 100%;
+    background-color: black;
+    height: 80px;
+}
+
+a:hover {
+    text-decoration: underline;
+    font-size: 14px;
+    font-weight: 600;
+    opacity: 0.7;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0px;
+}
+
+.buttons-header {
+    display: flex;
+    float: right;
+    color: white;
+    margin: 15px 15px;
+    align-items: center;
+    height: 50px;
+}
+
+nav {
+    width: 100%;
+    background-color: #0095A8;
+    height: 60px;
+}
+
+.buttons-nav {
+    display: inline-flex;
+    color: white;
+    height: 50px;
+    margin: 0px 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    width: 100%;
+    height: 150px;
+    clear: both;
+    background: black;
+    color: white;
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.buttons-footer {
+    display: flex;
+    color: white;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+.button-help {
+    display: inline-flex;
+    color: white;
+    height: 50px;
+    float: right;
+    align-items: center;
+    justify-content: center;
+    padding-right: 10px;
+    
+}
+
+input {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.icons {
+    float: right;
+    margin: 15px;
+}
+
+.icons-distance {
+    margin-right: 20px;
+}
+
+aside {
+    width: 40%;
+    height: 100%;
+    float:left;
+    margin-top: 2px;
+    padding-left: 40px;
+}
+
+.button-a {
+  border-radius: 20px;
+  color: black;
+  padding: 15px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  background-color: rgb(158, 157, 157);
+  font-weight: bold;
+  margin-left: 20px;
+}
+
+pre {
+    font-size: 30px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+@media screen and (max-width: 480px) {
+    header {
+        width: 100%;
+    }
+    div.logo {
+        display: flex;
+       
+        height: 85px;
+    }
+    div.carousel-adjust {
+        display: none;
+    }
+    input {
+        display: none;
+    }
+    div.icons {
+        display: none;
+    }
+
+    aside {
+        display: contents;
+    }
+
+    h1 {
+        margin-left: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        
+    }
+    pre {
+        font-size: 16px;
+    }
+    
+    a.button-a {
+        border-radius: 20px;
+        color: black;
+        padding: 15px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10px;
+        margin: 4px 2px;
+        cursor: pointer;
+        background-color: rgb(158, 157, 157);
+        font-weight: bold;
+        margin-left: 4px;
+    }
+    footer {
+        margin-top: 20px;
+    }
+
+}
+
+@media screen and (max-width: 1024px) {
+    header {
+        width: 100%;
+    }
+    div.logo {
+        display: flex;
+       
+        height: 85px;
+    }
+    div.carousel-adjust {
+        display: none;
+    }
+    input {
+        display: none;
+    }
+    div.icons {
+        display: none;
+    }
+
+    aside {
+        display: contents;
+    }
+
+    h1 {
+        margin-left: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        
+    }
+    pre {
+        font-size: 16px;
+    }
+    
+    a.button-a {
+        border-radius: 20px;
+        color: black;
+        padding: 15px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 10px;
+        margin: 4px 2px;
+        cursor: pointer;
+        background-color: rgb(158, 157, 157);
+        font-weight: bold;
+        margin-left: 4px;
+    }
+    footer {
+        margin-top: 20px;
+    }
+
+}

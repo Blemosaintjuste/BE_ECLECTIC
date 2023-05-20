@@ -1,0 +1,200 @@
+body {
+    margin: 0;
+}
+
+h1 {
+    margin-left: 60px;
+    font-size: 50px;
+    margin-bottom: 2px;
+    margin-top: 20px
+}
+
+header {
+    width: 100%;
+    background-color: black;
+    height: 80px;
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 0px;
+    
+    
+}
+
+.buttons-header {
+    display: flex;
+    float: right;
+    color: white;
+    margin: 15px 15px;
+    align-items: center;
+    height: 50px;
+}
+
+
+nav {
+    width: 100%;
+    background-color: #0095A8;
+    height: 60px;
+}
+
+.buttons-nav {
+    display: inline-flex;
+    color: white;
+    height: 50px;
+    margin: 0px 15px;
+    justify-content: center;
+    align-items: center;
+}
+
+footer {
+    width: 100%;
+    height: 150px;
+    clear: both;
+    background: black;
+    color: white;
+    font-size: 20px;
+    line-height: 22px;
+}
+
+.buttons-footer {
+    display: flex;
+    color: white;
+    padding-left: 15px;
+    padding-top: 15px;
+}
+
+
+input {
+    margin-top: 20px;
+    margin-left: 10px;
+}
+
+.icons {
+    float: right;
+    margin: 15px;
+}
+
+.icons-distance {
+    margin-right: 20px;
+}
+
+aside {
+    width: 40%;
+    height: 360px;
+    float:left;
+    margin-top: 2px;
+    padding-left: 50px;
+}
+
+main {
+padding-right: 80px;
+    float: right;
+    color:#000;
+    height: 100%;
+}
+
+pre {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.img-playlists {
+   width: 300px;
+   margin-bottom: 14px;
+}
+.img1-height{
+    height: 169px;
+}
+.img2-height {
+    height: 199px;
+}
+@media screen and (max-width: 800px) {
+    
+    div.logo {
+        display: flex;
+       
+        height: 85px;
+    }
+   
+    input {
+        display: none;
+    }
+    div.icons {
+        display: none;
+    }
+    aside {
+        display: contents;
+    }
+    main {
+        display: contents;
+    }
+    h1 {
+        margin-left: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        
+    }
+    pre {
+        font-size: 16px;
+    }
+    .img-playlists {
+        width: 200px;
+        margin-left: 26px;
+        margin-bottom: 14px;
+    }  
+    .img1-height {
+        height: 113px;
+    }
+    .img2-height {
+        height: 133px;
+    }   
+    footer {
+        margin-top: 20px;
+    }
+
+}
+
+@media screen and (max-width: 1155px) {
+    
+    div.logo {
+        display: flex;
+       
+        height: 85px;
+    }
+   
+    input {
+        display: none;
+    }
+    div.icons {
+        display: none;
+    }
+  
+    h1 {
+        margin-left: 10px;
+        font-size: 25px;
+        font-weight: bold;
+        
+    }
+    pre {
+        font-size: 16px;
+    }
+    .img-playlists {
+        width: 200px;
+        margin-left: 26px;
+        margin-bottom: 14px;
+    }  
+    .img1-height {
+        height: 113px;
+    }
+    .img2-height {
+        height: 133px;
+    }   
+    footer {
+        margin-top: 20px;
+    }
+
+}
