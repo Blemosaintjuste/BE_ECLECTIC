@@ -4,6 +4,8 @@
 %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="model.ArtistasFavoritosDAO" %>
+<%@page import="model.ArtistasFavoritos" %>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -56,6 +58,37 @@
         </aside>
         <main>
             <a href="./cadastroArtistasFavoritos.jsp" class="buttons-cadastro">Cadastrar Artista Favorito</a>
+            
+            
+            <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <%
+                    ArtistasFavoritosDAO adao = new ArtistasFavoritosDAO();
+                    for(ArtistasFavoritos art : adao.listAll()) {
+                %>
+                <tr>
+                     <td><%= art.getId_artistasfavoritos() %></td>
+                     <td><%= art.getNome() %></td>
+                    <td>
+                        <a href="ArtistasFavoritosUpdate?id_artistasfavoritos=<%= art.getId_artistasfavoritos() %>">EDITAR</a>
+                    </td>
+                    <td>
+                        <a onclick="confirmDelete(<%= art.getId_artistasfavoritos() %>)">EXCLUIR</a>
+                    </td>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+            
+            
         </main>
         
 

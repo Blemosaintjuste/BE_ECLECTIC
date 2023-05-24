@@ -93,6 +93,14 @@ public class ArtistasFavoritosDAO {
         prep.close();
     }
     
+     public void deleteArtista(int id) throws SQLException {
+        String query = "DELETE FROM artistas_favoritos "
+                + "WHERE id_artistasfavoritos = " + id;
+        
+        PreparedStatement prep = conn.prepareStatement(query);
+        prep.execute();
+        prep.close();
+    }
     
     
 }

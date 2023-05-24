@@ -10,7 +10,7 @@
         <hr>
         <form action="CadastroArtistasFavoritos" method="post">
             <h3>Novo Artistas Favoritos</h3>
-            <input type="text" name="ArtistaFavoritos" placeholder="Nome do Artista Favorito">
+            <input type="text" name="artistafavorito" placeholder="Nome do Artista Favorito">
             
             <input type="submit" value="cadastrar" ><hr><br>
             

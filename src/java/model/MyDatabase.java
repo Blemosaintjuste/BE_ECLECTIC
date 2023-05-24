@@ -8,7 +8,7 @@ import java.sql.SQLException;
 public class MyDatabase {
     public static Connection getDatabase() throws ClassNotFoundException, SQLException{
         String driver = "com.mysql.jdbc.Driver";
-        String url ="jdbc:mysql://localhost:3306/beeclectic_db";
+        String url ="jdbc:mysql://localhost:3306/be_eclectic";
         String user = "root";
         String pass = "";
         
