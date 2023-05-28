@@ -4,6 +4,8 @@
 %>
 
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="model.AlbunsFavoritosDAO" %>
+<%@page import="model.AlbunsFavoritos" %>
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -11,7 +13,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="img/beeclectic.png" type="image/x-icon">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/lista.css">
         <script src="https://kit.fontawesome.com/e764f2111b.js" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
         <title>FAVORITE ALBUMS</title>
@@ -51,11 +53,52 @@
             </div> 
         </nav>
         
-        <aside>
-           
-        </aside>
+     
         <main>
+            <div class="buttons-cadastro"><a href="./cadastroAlbunsFavoritos.jsp">Cadastrar Album Favorito</a></div>
             
+            
+            <table border="1">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Nome</th>
+                    <th>Artista</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <%
+                    AlbunsFavoritosDAO adao = new AlbunsFavoritosDAO();
+                    for(AlbunsFavoritos art : adao.listAll()) {
+                %>
+                <tr>
+                     <th><%= art.getId_albunsfavoritos() %></th>
+                     <th><%= art.getNome() %></th>
+                     <th><%= art.getArtista() %></th>
+                    <th>
+                        <div><a href="AlbunsFavoritosUpdate?id_albunsfavoritos=<%= art.getId_albunsfavoritos() %>">EDITAR</a></div>
+                    </th>
+                    <th>
+                        <div><a onclick="confirmDelete(<%= art.getId_albunsfavoritos() %>)">EXCLUIR</a></div>
+                    </th>
+                </tr>
+                <% } %>
+            </tbody>
+        </table>
+            
+             <script>
+            function confirmDelete(id) {
+                if(confirm("Deseja realmente excluir?")) {
+                    window.location.replace("AlbunsFavoritosDelete?id_albunsfavoritos=" + id);
+                } else {
+                    alert("Exclusão cancelada!");
+                }
+            }
+        </script>
+            
+       
         </main>
         
 

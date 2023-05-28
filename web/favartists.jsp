@@ -13,7 +13,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="shortcut icon" href="img/beeclectic.png" type="image/x-icon">
-        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/lista.css">
         <script src="https://kit.fontawesome.com/e764f2111b.js" crossorigin="anonymous"></script>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
         <title>FAVORITE ARTISTS</title>
@@ -53,11 +53,9 @@
             </div> 
         </nav>
         
-        <aside>
-           
-        </aside>
+        
         <main>
-            <a href="./cadastroArtistasFavoritos.jsp" class="buttons-cadastro">Cadastrar Artista Favorito</a>
+            <div class="buttons-cadastro"><a href="./cadastroArtistasFavoritos.jsp">Cadastrar Artista Favorito</a></div>
             
             
             <table border="1">
@@ -75,19 +73,28 @@
                     for(ArtistasFavoritos art : adao.listAll()) {
                 %>
                 <tr>
-                     <td><%= art.getId_artistasfavoritos() %></td>
-                     <td><%= art.getNome() %></td>
-                    <td>
-                        <a href="ArtistasFavoritosUpdate?id_artistasfavoritos=<%= art.getId_artistasfavoritos() %>">EDITAR</a>
-                    </td>
-                    <td>
-                        <a onclick="confirmDelete(<%= art.getId_artistasfavoritos() %>)">EXCLUIR</a>
-                    </td>
+                     <th><%= art.getId_artistasfavoritos() %></th>
+                     <th><%= art.getNome() %></th>
+                    <th>
+                        <div><a href="ArtistasFavoritosUpdate?id_artistasfavoritos=<%= art.getId_artistasfavoritos() %>">EDITAR</a></div>
+                    </th>
+                    <th>
+                        <div><a onclick="confirmDelete(<%= art.getId_artistasfavoritos() %>)">EXCLUIR</a></div>
+                    </th>
                 </tr>
                 <% } %>
             </tbody>
         </table>
             
+             <script>
+            function confirmDelete(id) {
+                if(confirm("Deseja realmente excluir?")) {
+                    window.location.replace("ArtistasFavoritosDelete?id_artistasfavoritos=" + id);
+                } else {
+                    alert("Exclusão cancelada!");
+                }
+            }
+        </script>
             
         </main>
         

@@ -8,61 +8,39 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.sql.SQLException;
-import model.ArtistasFavoritos;
-import model.ArtistasFavoritosDAO;
+import model.AlbunsFavoritosDAO;
 
 
-@WebServlet(name = "CadastroArtistasFavoritos", urlPatterns = {"/CadastroArtistasFavoritos"})
-public class CadastroArtistasFavoritos extends HttpServlet {
-    private int id;
-    private String nome;
-   
-    
+@WebServlet(name = "AlbunsFavoritosDelete", urlPatterns = {"/AlbunsFavoritosDelete"})
+public class AlbunsFavoritosDelete extends HttpServlet {
+
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
         
-        if(request.getParameter("id") != null) {
-           this.id = Integer.parseInt(request.getParameter("id"));
-        }
+        int id = Integer.parseInt(request.getParameter("id_albunsfavoritos"));
         
-        //Recebendo valores do formulário de cadastro
-        this.nome = request.getParameter("artistafavorito");
-       
-        //Criando objeto da classe Artista para salvar no BD
-        ArtistasFavoritos artistasFavoritos = new ArtistasFavoritos(
-                this.nome 
-        );
-        
-        //Instanciando a classe DAO para usar o método
-        //de inserção enviando o objeto criado acima
         try {
-            ArtistasFavoritosDAO adao = new ArtistasFavoritosDAO();
+            AlbunsFavoritosDAO adao = new AlbunsFavoritosDAO();
+            adao.deleteAlbumFavorito(id);
+            response.sendRedirect("favalbums.jsp");
             
-            if(request.getParameter("id") != null) {
-                artistasFavoritos.setId_artistasfavoritos(id);
-                adao.updateArtistasFavoritos(artistasFavoritos);
-            } else {
-                adao.insertArtistasFavoritos(artistasFavoritos);
-            }
-            response.sendRedirect("favartists.jsp");
-        
-        } catch(ClassNotFoundException | SQLException erro) {   
+        }catch(SQLException | ClassNotFoundException erro) {
         
         try (PrintWriter out = response.getWriter()) {
             /* TODO output your page here. You may use following sample code. */
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet CadastroArtistasFavoritos</title>");            
+            out.println("<title>Servlet AlbumDelete</title>");            
             out.println("</head>");
             out.println("<body>");
-            out.println("<h1>Ocorreu algum erro: " + erro + "</h1>");
+            out.println("<h1>Servlet ArtistaDelete at " + request.getContextPath() + "</h1>");
             out.println("</body>");
             out.println("</html>");
         }
-        }
     }
+}
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">
     /**

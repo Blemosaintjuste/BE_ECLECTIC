@@ -8,14 +8,15 @@ import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.sql.SQLException;
-import model.ArtistasFavoritos;
-import model.ArtistasFavoritosDAO;
+import model.AlbunsFavoritos;
+import model.AlbunsFavoritosDAO;
 
 
-@WebServlet(name = "CadastroArtistasFavoritos", urlPatterns = {"/CadastroArtistasFavoritos"})
-public class CadastroArtistasFavoritos extends HttpServlet {
+@WebServlet(name = "CadastroAlbunsFavoritos", urlPatterns = {"/CadastroAlbunsFavoritos"})
+public class CadastroAlbunsFavoritos extends HttpServlet {
     private int id;
     private String nome;
+    private String artista;
    
     
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
@@ -27,25 +28,27 @@ public class CadastroArtistasFavoritos extends HttpServlet {
         }
         
         //Recebendo valores do formulário de cadastro
-        this.nome = request.getParameter("artistafavorito");
+        this.nome = request.getParameter("albumfavorito");
+        this.artista = request.getParameter("artista");
        
         //Criando objeto da classe Artista para salvar no BD
-        ArtistasFavoritos artistasFavoritos = new ArtistasFavoritos(
-                this.nome 
+        AlbunsFavoritos albunsFavoritos = new AlbunsFavoritos(
+                this.nome, 
+                this.artista
         );
         
         //Instanciando a classe DAO para usar o método
         //de inserção enviando o objeto criado acima
         try {
-            ArtistasFavoritosDAO adao = new ArtistasFavoritosDAO();
+            AlbunsFavoritosDAO adao = new AlbunsFavoritosDAO();
             
             if(request.getParameter("id") != null) {
-                artistasFavoritos.setId_artistasfavoritos(id);
-                adao.updateArtistasFavoritos(artistasFavoritos);
+                albunsFavoritos.setId_albunsfavoritos(id);
+                adao.updateAlbunsFavoritos(albunsFavoritos);
             } else {
-                adao.insertArtistasFavoritos(artistasFavoritos);
+                adao.insertAlbunsFavoritos(albunsFavoritos);
             }
-            response.sendRedirect("favartists.jsp");
+            response.sendRedirect("favalbums.jsp");
         
         } catch(ClassNotFoundException | SQLException erro) {   
         
@@ -54,7 +57,7 @@ public class CadastroArtistasFavoritos extends HttpServlet {
             out.println("<!DOCTYPE html>");
             out.println("<html>");
             out.println("<head>");
-            out.println("<title>Servlet CadastroArtistasFavoritos</title>");            
+            out.println("<title>Servlet CadastroAlbunsFavoritos</title>");            
             out.println("</head>");
             out.println("<body>");
             out.println("<h1>Ocorreu algum erro: " + erro + "</h1>");

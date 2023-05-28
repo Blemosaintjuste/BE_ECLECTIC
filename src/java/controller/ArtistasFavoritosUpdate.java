@@ -21,7 +21,7 @@ public class ArtistasFavoritosUpdate extends HttpServlet {
             throws ServletException, IOException {
         response.setContentType("text/html;charset=UTF-8");
          //Recebendo o ID
-        int id = Integer.parseInt(request.getParameter("id"));
+        int id = Integer.parseInt(request.getParameter("id_artistasfavoritos"));
         
         //Pegando registro do BD
         try {

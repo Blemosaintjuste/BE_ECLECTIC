@@ -3,12 +3,12 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/Documentos/BE_ECLECTIC/web/cadastroArtistasFavoritos.jsp</file>
-            <file>file:/D:/Documentos/BE_ECLECTIC/src/java/model/ArtistasFavoritos.java</file>
-            <file>file:/D:/Documentos/BE_ECLECTIC/web/edit-artistafavorito.jsp</file>
-            <file>file:/D:/Documentos/BE_ECLECTIC/src/java/controller/ArtistasFavoritosUpdate.java</file>
-            <file>file:/D:/Documentos/BE_ECLECTIC/src/java/model/ArtistasFavoritosDAO.java</file>
+            <file>file:/D:/Documentos/BE_ECLECTIC/web/favalbums.jsp</file>
+            <file>file:/D:/Documentos/BE_ECLECTIC/src/java/controller/AlbunsFavoritosDelete.java</file>
+            <file>file:/D:/Documentos/BE_ECLECTIC/src/java/model/MyDatabase.java</file>
+            <file>file:/D:/Documentos/BE_ECLECTIC/src/java/controller/AlbunsFavoritosUpdate.java</file>
             <file>file:/D:/Documentos/BE_ECLECTIC/web/favartists.jsp</file>
+            <file>file:/D:/Documentos/BE_ECLECTIC/src/java/model/AlbunsFavoritosDAO.java</file>
         </group>
     </open-files>
 </project-private>
